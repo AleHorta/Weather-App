@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="onload()">
+    <div id="container">
+        
+        <section id="search-bar">
+            <input type="text" name="serch" id="search-input" placeholder="Out of service...">
+            <article class="actions">
+                <button onclick="search()">
+                    <span class="material-icons">search</span>
+                </button>
+            </article>
+        </section>
+
+        <div id="result">
+            <article id="weather-img"></article>
+            <article class="block">
+                <h1 id="location-txt">
+                    <section id="location"></section>
+                    <section id="date"></section>
+                    <section id="description"></section>
+                </h1>
+                <section class="information-container">
+                    <h2 id="temp">
+                        Temperature: <sapn id="temperature" class="information" ></sapn><sup>°C</sup>
+                    </h2>
+                    </section>
+                <section class="information-container">
+                    <h3 id="humi">
+                        Humidity: <span id="humidity" class="information"></span>
+                    </h3>
+                </section>
+                <section class="information-container">
+                    <h3 id="press">
+                        Pressure: <span id="pressure" class="information"></span>
+                    </h3>
+                </section>
+            </article>
+        </div>
+    </div>
+</body>
+    <script src="main.js"></script>
+</html>
