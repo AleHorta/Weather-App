@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="shortcut icon" href="https://i.pinimg.com/564x/c0/72/70/c07270bcf9de930601d2b36f8ea1524d.jpg">
     <title>Weather App</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -9,17 +10,17 @@
 <body onload="onload()">
     <div id="container">
         
-        <section id="search-bar">
-            <input type="text" name="serch" id="search-input" placeholder="Out of service...">
+        <form id="search-bar">
+            <input type="text" name="serch" id="search-input" placeholder="Type the City" autocomplete="off">
             <article class="actions">
-                <button onclick="search()">
+                <button>
                     <span class="material-icons">search</span>
                 </button>
             </article>
-        </section>
+        </form>
 
         <div id="result">
-            <article id="weather-img"></article>
+            <span id="weather-img"></span>
             <article class="block">
                 <h1 id="location-txt">
                     <section id="location"></section>
@@ -33,17 +34,16 @@
                     </section>
                 <section class="information-container">
                     <h3 id="humi">
-                        Humidity: <span id="humidity" class="information"></span>
-                    </h3>
-                </section>
-                <section class="information-container">
-                    <h3 id="press">
-                        Pressure: <span id="pressure" class="information"></span>
+                        Humidity: <span id="humidity" class="information"></span>%
                     </h3>
                 </section>
             </article>
         </div>
+
+        <div id="new-search"></div>
+
     </div>
 </body>
     <script src="main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
